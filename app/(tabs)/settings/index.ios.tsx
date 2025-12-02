@@ -8,7 +8,7 @@ import { IconSymbol } from "@/components/IconSymbol";
 import DateTimePicker from "@react-native-community/datetimepicker";
 
 export default function SettingsScreen() {
-  const [selectedDate, setSelectedDate] = useState(new Date(new Date().getFullYear(), 11, 25));
+  const [selectedDate, setSelectedDate] = useState(new Date(2025, 11, 25));
 
   const handleDateChange = (event: any, date?: Date) => {
     if (date) {
@@ -26,9 +26,9 @@ export default function SettingsScreen() {
   };
 
   const handleResetToChristmas = () => {
-    const christmas = new Date(new Date().getFullYear(), 11, 25);
+    const christmas = new Date(2025, 11, 25);
     setSelectedDate(christmas);
-    console.log('Reset to Christmas');
+    console.log('Reset to Christmas 2025');
   };
 
   return (
@@ -93,7 +93,7 @@ export default function SettingsScreen() {
                 size={20} 
                 color={colors.card} 
               />
-              <Text style={styles.resetButtonText}>Reset to Christmas</Text>
+              <Text style={styles.resetButtonText}>Reset to Christmas 2025</Text>
             </TouchableOpacity>
           </View>
 
@@ -102,7 +102,7 @@ export default function SettingsScreen() {
             <View style={styles.infoCard}>
               <Text style={styles.infoText}>
                 This app helps you count down to your favorite holiday! 
-                Set a custom date or use the default Christmas countdown.
+                Set a custom date or use the default Christmas 2025 countdown.
               </Text>
             </View>
           </View>

@@ -14,15 +14,9 @@ export default function HomeScreen() {
   useEffect(() => {
     const calculateTimeRemaining = () => {
       const now = new Date();
-      const currentYear = now.getFullYear();
       
-      // Set Christmas date for this year
-      let christmas = new Date(currentYear, 11, 25, 0, 0, 0);
-      
-      // If Christmas has passed this year, set it to next year
-      if (now > christmas) {
-        christmas = new Date(currentYear + 1, 11, 25, 0, 0, 0);
-      }
+      // Set Christmas date for 2025
+      const christmas = new Date(2025, 11, 25, 0, 0, 0);
 
       const difference = christmas.getTime() - now.getTime();
 
@@ -52,7 +46,7 @@ export default function HomeScreen() {
     >
       <View style={styles.overlay}>
         <View style={[styles.container, Platform.OS === 'android' && styles.androidContainer]}>
-          <Text style={styles.title}>🎄 Christmas Countdown 🎄</Text>
+          <Text style={styles.title}>🎄 Christmas Countdown 2025 🎄</Text>
           
           <View style={styles.countdownContainer}>
             <View style={styles.timeBlock}>
@@ -87,7 +81,7 @@ export default function HomeScreen() {
           <View style={styles.messageContainer}>
             <Text style={styles.message}>
               {timeRemaining.days > 0 
-                ? `Only ${timeRemaining.days} days until Christmas! 🎅`
+                ? `Only ${timeRemaining.days} days until Christmas 2025! 🎅`
                 : timeRemaining.hours > 0
                 ? `Christmas is today! Only ${timeRemaining.hours} hours left! 🎁`
                 : 'Merry Christmas! 🎉'}
